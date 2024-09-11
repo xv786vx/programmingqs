@@ -17,3 +17,23 @@ class Solution:
                 head = head.next
             else:
                 return head
+            
+#redid it slightly better
+class Solution(object):
+    def middleNode(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        dummy1, length = head, 0
+        while dummy1:
+            dummy1 = dummy1.next
+            length += 1
+
+        middle = int(-(-length/2)/1)
+
+        while length > middle:
+            head = head.next
+            length -= 1
+        else:
+            return head

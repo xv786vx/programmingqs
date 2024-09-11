@@ -19,4 +19,20 @@ class Solution(object):
         
         dfs(root)
         return self.res
+
+#redid it mostly from memory and understanding
+class Solution:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        self.res = 0
+        def dfs(cur):
+            if not cur:
+                return 0
+
+            left, right = dfs(cur.left), dfs(cur.right)
+
+            self.res = max(self.res, left + right)
+            return 1 + max(left, right)
+        
+        dfs(root)
+        return self.res
         

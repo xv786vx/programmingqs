@@ -22,5 +22,19 @@ class Solution(object):
             i = i+1
         
         return head
+
+#redid this q cleaner
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        dummy1, dummy2, stack = head, head, []
+        while dummy1:
+            stack.append(dummy1.val)
+            dummy1 = dummy1.next
+        
+        while stack:
+            dummy2.val = stack.pop()
+            dummy2 = dummy2.next
+        
+        return head
     
     
