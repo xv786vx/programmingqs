@@ -69,7 +69,6 @@ class Solution:
         fill(image, sr, sc, start_color, color)
 
         return image
-                                                               
 
     
 #dfs recursion (lc recommended)
@@ -121,7 +120,7 @@ class Solution:
                 image[y][x+1] = color
         
         return image
-                                                               
+
 
 
 

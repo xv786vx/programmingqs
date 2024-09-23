@@ -30,3 +30,21 @@ class Solution(object):
             if level:
                 lst.append(level)
         return lst
+    
+    
+class Solution(object):
+    def levelOrder(self, root):
+        lst = []
+        q = deque()
+        q.append(root)
+        while q:
+            level = []
+            for i in range(len(q)):
+                node = q.popleft()
+                if node:
+                    level.append(node.val)
+                    q.append(node.left)
+                    q.append(node.right)
+            if level:
+                lst.append(level)
+        return lst
