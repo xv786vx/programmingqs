@@ -21,8 +21,8 @@ class Solution(object):
 
         while q:
             level = []
-            for i in range(len(q)):
-                node = q.popleft()
+            for _ in range(len(q)): # loops for every level
+                node = q.popleft() #fifo
                 if node:
                     level.append(node.val)
                     q.append(node.left)
@@ -47,4 +47,5 @@ class Solution(object):
                     q.append(node.right)
             if level:
                 lst.append(level)
+                lst.append(level) #if level non-empty append the level to the list
         return lst
