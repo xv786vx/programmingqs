@@ -11,11 +11,11 @@ class Solution(object):
         res = []
 
         for i in range(len(intervals)):
-            if newInterval[1] < intervals[i][0]:
+            if newInterval[1] < intervals[i][0]: #if end of new interval is less than start of current interval
                 res.append(newInterval)
                 return res + intervals[i:]
 
-            elif newInterval[0] > intervals[i][1]:
+            elif newInterval[0] > intervals[i][1]: #if start of new interval is greater than end of current interval
                 res.append(intervals[i])
             
             #no overlap in either condition
