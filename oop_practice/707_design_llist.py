@@ -18,7 +18,6 @@ class MyLinkedList:
             cur_i += 1
         
         
-        
     def addAtHead(self, val: int) -> None:
         new = Node(val)
         new.next = self._first

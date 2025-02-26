@@ -37,8 +37,6 @@ class GameSettings:
         
     
 
-
-
 def main():
     settings = GameSettings() # Ensure singleton instance
 
